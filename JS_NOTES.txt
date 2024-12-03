@@ -1,0 +1,64 @@
+JS SCOPE AND CLOSURE .
+
+
+Global scope : Todo el alcance del codigo ...
+
+El scope local de función (function scope) es el entorno donde las variables locales 
+solo se pueden acceder desde una función del programa.
+
+En este scope no importa que las variables sean declaradas con var, let  o const. 
+Sin embargo, ten presente que se puede redeclarar una variable con var, pero no con let y const.
+
+Block Scope : 
+
+l scope local de bloque es el entorno donde las variables locales únicamente pueden ser accedidas desde un bloque de código del programa. Un bloque de código es todo aquello que está dentro de los caracteres de llaves {}.
+
+Hoisting en variables
+Para hablar del scope de bloque, realizaré una breve explicacion de Hoisting. Hablaré un más de esto en su clase respectiva.
+
+Hoisting es un término para describir que la declaración de variables y funciones son desplazadas a la parte superior del scope más cercano.
+
+Al intentar llamar fuera del alcance de bloque a las variables declaradas con let o const, tenemos un error, mientras que la variable declarada con var es accedida sin problemas. Esto puede ocasionar un error lógico ya que no estamos protegiendo a la variable fruit1 (declarada con var), para que solo sea accedida dentro de su bloque, esta puede ser accedida y alterada por otra función y nos puede llevar tiempo encontrar cuál es el problem
+
+El modo estricto es una funcionalidad que le permite al motor de JavaScript cambiar la manera en que ejecuta el código. En este modo, se reduce las cosas que podemos hacer, esto es bueno porque permite manejar errores que son poco perceptibles o que el motor de JavaScript sobreentiende y ayuda a su compilación para corregirlos.
+
+Este en el código colocando en la primera línea "use strict" para todo el archivo. También puede utilizarse en la primera línea de una función, pero no para un bloque en específico.
+
+El modo estricto tiene varios cambios en la semántica normal de JavaScript:
+
+Elimina algunos errores silenciosos de JavaScript cambiándolos para que lancen errores.
+
+Corrige errores que hacen difícil para los motores de JavaScript realizar optimizaciones: a veces, el código en modo estricto puede correr más rápido que un código idéntico pero no estricto.
+
+Prohíbe cierta sintaxis que probablemente sea definida en futuras versiones de ECMAScript.
+
+Un closure es la combinación entre una función y el ámbito léxico en el que esta fue declarada. Con esto, la función recuerda el ámbito con el cual se creó. Puedes entender los closures como:
+
+función interna + scope. Mira estos pasos: 
+
+1. Genera una función que retorna una función interna.
+
+2. Esta función interna tiene un scope, el cual puede ser accedido únicamente por esta función, es decir, las variables, funciones, etc. definidas en el scope solo pueden ser accedidas por la función interna.
+
+3. Como resultado, esta función interna retornada con su scope será nuestro closure.
+
+Ámbito léxico :
+
+El ámbito léxico se refiere al alcance de una variable siguiendo la cadena de scopes. Una variable se puede abordar desde un nivel inferior hasta uno superior, pero no al contrario.
+
+Los closures son básicamente cuando aprovechamos la habilidad de JavaScript de emplear las variables que están en el scope padre de nuestro bloque de código, por eso el global scope es un closure grande. El bloque myFunction puede utilizar TODAS las variables que están disponibles en el bloque inmediato anterior. Usando el ejemplo visto en el video:
+
+Sin embargo, está mal visto modificar variables globales, por eso es que quieres crear variables dentro de un scope cerrado y que interactúen entre ellas. Entonces, declaras las variables que vas a usar dentro del scope padre del bloque que las va a modificar para que siempre pueda acceder a ellas.
+
+Para eso originas un nuevo “global scope” ficticio que va a conservar todas las variables que tú quieras monitorear. Ahora mira las similitudes entre el código de arriba y el que está justo abajo de aquí:
+
+Los closures permiten acceder al ámbito de una función exterior desde una función interior. En javascript, los closures se crean cada vez que una función es creada.
+
+Los closures no son siempre utilizados.
+
+Un closure es cuando una función accede a una variable fuera de su contexto.
+
+Al trabajar con closures entra en juego el concepto de alcance de las variables.
+
+
+
