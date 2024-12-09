@@ -1,17 +1,15 @@
 JS SCOPE AND CLOSURE .
 
-
 Global scope : Todo el alcance del codigo ...
 
-El scope local de función (function scope) es el entorno donde las variables locales 
-solo se pueden acceder desde una función del programa.
+El scope local de función (function scope) es el entorno donde las variables locales solo se pueden acceder desde una función del programa.
 
 En este scope no importa que las variables sean declaradas con var, let  o const. 
 Sin embargo, ten presente que se puede redeclarar una variable con var, pero no con let y const.
 
 Block Scope : 
 
-l scope local de bloque es el entorno donde las variables locales únicamente pueden ser accedidas desde un bloque de código del programa. Un bloque de código es todo aquello que está dentro de los caracteres de llaves {}.
+El scope local de bloque es el entorno donde las variables locales únicamente pueden ser accedidas desde un bloque de código del programa. Un bloque de código es todo aquello que está dentro de los caracteres de llaves {}.
 
 Hoisting en variables
 Para hablar del scope de bloque, realizaré una breve explicacion de Hoisting. Hablaré un más de esto en su clase respectiva.
@@ -59,6 +57,38 @@ Los closures no son siempre utilizados.
 Un closure es cuando una función accede a una variable fuera de su contexto.
 
 Al trabajar con closures entra en juego el concepto de alcance de las variables.
+
+<<Tienes una C>losure cuando una funcion cuaquierse accede a una variable fuera 
+    de su contexto y la recuerda >>
+    
+Hoisting ....
+
+Hoisting es un término para describir que las declaraciones de variables y funciones son desplazadas a la parte superior del scope más cercano, scope global o de función. Esto sucede solamente con las declaraciones y no con las asignaciones.
+
+El código permanece igual, solo es una interpretación del motor de JavaScript. En el caso de las variables solamente sucede cuando son declaradas con var.
+
+La Temporal Dead Zone es una región del código donde la variable está declarada, pero no es posible acceder a esta, provocando un error de tipo ReferenceError.
+
+cLa palabra reservada debugger sirve para detener la ejecución del programa, pero solo funciona si el panel de las herramientas de desarrollo está abierto. Este panel te mostrará información sobre el código hasta la línea del debugger.
+
+Breakpoints
+Los breakpoints son puntos donde la ejecución del programa se parará. Para activarlos se debe dar clic en la línea de código que se desea parar.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

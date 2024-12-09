@@ -1,0 +1,15 @@
+
+VSC SHORTCUTS :
+
+
+Alguno de los atajos de teclado son estos . ++Escribir en varios lados a la vez++ alt + click
+
+++Mover una línea hacia arriba y abajo++ alt + flecha hacia arriba (o flecha hacia abajo)
+
+++Copiar una línea hacia arriba o abajo++ alt + shift + flecha hacia arriba (o flecha hacia abajo)
+
+++Borrar una línea completa a la vez++ shift + supr
+
+Alt + shift y seleccionar al principio de cada linea.
+
+

@@ -1,0 +1,354 @@
+JS &&  POO 
+
+Objetos Literales !== Instancias Clasicas de >POO ;
+
+JS  tiene Prototypes ; 
+
+Cuando creamos Instancias de un Prototypo No solamente se reciben los atributos y metodos del Prototypo Definido , mas tambien recibisese los atributos/metodos del Prototypo Object ; 
+
+JS :: TODO ES ObJETOS ....
+
+Objetos literales ;
+Instancias de prototypo ;
+Arrays ;
+Prototype Object() ;
+
+R/: Siempre que se cccrease un Objeto Literal en JS se va tener __PROTO__ por defecto nos dice de que prototypo proviene Prototype;
+
+Yo tambien puedo crear mis propios Prototypos particulares y recibansen los metodos y atributos de prototypo : Object ; 
+
+Propiedad .__Proto__;
+
+Array && String tambien son Objects con los atributos && Metodos de este ; 
+EG : __Proto__: MyArray es una instancia del prototypo Array(0);
+
+Los Objetos Literales si Son Instancias del Prototypo : Object que viene creado pro defecto en JS ; 
+
+Las Instancias de Prototypos tambien son Objetos ; 
+
+: Objecto Literal .
+
+Los objetos literales se distinguen de los objetos de la POO porque no son instancias de un prototipo creado por el desarrollador.
+
+Sin embargo los objetos literales son instancias del prototipo Object creado por defecto en JavaScript. .
+
+: Prototipo 
+
+Un prototipo es una estructura de código a partir de la cual se crean objetos, ya que guarda los atributos y métodos que luego podrán ser heredados por sus instancias. . Podemos pensarlo como un "molde" de objetos. .
+
+Los prototipos son un mecanismo que permite a los objetos en JavaScript heredar características entre sí. Por ejemplo, si se busca una propiedad en un objeto y no se encuentra, JavaScript la toma automáticamente del prototipo.
+
+: Objeto : 
+
+Los objetos son estructuras de datos formadas por métodos y atributos, los cuales hereda de su prototipo padre. . De modo que los objetos son son instancias de ese prototipo, particularmente cuando dicho prototipo fue creado por el desarrollador (en caso contrario se llaman objetos literales). .
+
+
+Atributos : 
+
+Dentro de los objetos se pueden guardar atributos para guardar en ellos la información.
+
+La información que se les asocia. Así, toda la información del objeto se guarda en sí mismo. .
+ 
+Metodos :
+
+Dentro de los objetos también pueden guardarse métodos, los cuales son funciones que, entre otras cosas, permiten actualizar la información guardada en los atributos de forma segura. . 
+
+Atributo __proto__>: 
+
+Es el nombre que se le da al atributo donde se guardan los métodos que las estructuras de datos tienen por defecto en JavaScript. 
+
+El atributo __proto__ se hereda a partir de los prototipo por defecto de JavaScript para cada estructura de datos en particular, por ejemplo de los prototipos Object y Array. . El atributo __proto__ también se hereda a los objetos, ya que éstos son a la vez instancias de algún prototipo creado por el desarrollador y del prototipo Object.
+
+La palabra clave this se refiere al objeto actual en el que se está escribiendo el código, por lo que en este caso this es equivalente a la persona. Entonces, ¿por qué no escribir persona en su lugar? Como verás en el artículo JavaScript orientado a objetos para principiantes cuando comenzaremos a crear constructores, etc., this es muy útil: siempre asegurará que se usen los valores correctos cuando cambie el contexto de un miembro (por ejemplo, dos diferentes instancias de objetos persona) pueden tener diferentes nombres, pero querráx usar su propio nombre al decir su saludo). 
+
+Vamos a ilustrar lo que queremos decir con un par de objetos persona simplificados :
+
+var persona1 = {
+  nombre: 'Chris',
+  saludo: function() {
+    alert('¡Hola!, Soy '+ this.nombre + '.');
+  }
+}
+
+var persona2 = {
+  nombre: 'Brian',
+  saludo: function() {
+    alert('¡Hola!, Soy '+ this.nombre + '.');
+  }
+}
+
+This. hace referencia al objeto que está ejecutando una función en un momento 
+
+1. Lexical Binding: El que se crea con las arrow functions. 
+2. New Binding: Cuando creamos una nueva instancia con new. ** 
+3. Explicit Binding:** Invocación indirecta, cuando usamos algún método de invocación. 
+4. Implicit Binding: Invocación de método, cuando invocamos al método de un objeto. Como lo que señalaba Juan. 
+5. Default Binding: Invocación directa, cuando usamos una función que tiene un punto antes this tomará el valor del objeto que esté a la izquierda del punto.
+
+PROTOTYPOS :
+
+JavaScript es un lenguaje basado en prototipos para Objectos .
+
+https://es.javascript.info/object
+
+Clases en JavaScript
+
+
+Abstraccion : 
+
+Abstraccion: Podemos reducir la complejidad y permitir una implementación y diseño eficiente de los datos.
+
+Ventajas de uso:
+
+Evitamos codigo duplicado, es decir, reusamos codigo.
+Podemos crear múltiples instancias con una sola abstracción.
+Al encapsular datos, los estamos protegiendo
+Evitamos código a bajo nivel.
+Podemos cambiar implementaciones en la clase, sin perjudicar su funcionamiento.
+
+Abstraer hace referencia a la forma de separar o aislar los datos, rasgos, cualidades, propiedades o características esenciales, para que se puedan crear y formar instancias de dicho molde, o sea, la clase. Crear el prototipo es el objetivo de la abstracción, pues cada elemento u objeto, debe poderse abstraer para que podamos reutilizar el código, o sea crear instancias de esta clase.
+
+Encapsulación 
+
+La encapsulación es el empaquetamiento de datos y funciones en un componente (por ejemplo, una clase) y para luego controlar el acceso a ese componente para hacer un ejecto de "caja negra" fuera del objeto. Debido a esto, un usuario de esa clase solo necesita conocer su interfaz (es decir, los datos y las funciones expuestas fuera de la clase), no la implementación oculta.
+
+Getters y setters en JavaScript .
+
+Una función que obtiene un valor de una propiedad se llama getter y una que establece el valor de una propiedad se llama setter.
+
+
+ El uso de los módulos en JavaScript depende de las declaraciones ++Export++ e ++Import++.
+ 
+¿Como Importar? La importación obviamente se hace en el script que queremos usar dichos elementos.
+
+
+import {PlatziClass, Student, LearningPaths} from '/ruta';
+¿Como aplicar el modulo en HTML?
+
+
+<script type="module" src="main.js"></script>
+
+/*
+export class Course {
+  constructor({
+    name,
+    classes = [],
+  }) {
+
+    this.name = "";
+    this.name = name;
+    this.classes = classes;
+  }
+
+  get name() {
+    // Tu código aquí ...
+    return this._name;
+    
+  }
+
+  set name(newName) {
+    // Tu código aquí ...
+    
+    if (typeof newName === 'string') {
+
+      newName = newName.trim();
+
+      if (newName !== '') {
+
+        this._name = newName.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+        
+      }
+      
+    }
+  }
+}
+*/
+
+Herencia : 
+
+La herencia nos permite crear nuevas clases a partir de otras, la clase principal es llamada la Superclase, esta va a ser la clase general ,el molde general. Cuando veamos que tenemos elementos repetidos comenzamos a crear una abstracción, creamos una clase general que nos permita crear nuevas clases.
+
+Tenemos las subclases, que son las que heredan atributos y métodos de las Superclases, podríamos decir que son las clases hijas. En las clases hijas ponemos los atributos que solo ellas van a utilizar, que son solo características de ellas.
+
+Super La palabra clave super es usada para acceder y llamar funciones del padre de un objeto.
+
+Las expresiones super.prop y super[expr] son válidas en cualquier definición de método tanto para clases como para objetos literales (en-US).
+
+Sintaxis // llama al método constructor del objeto padre. super([arguments]);
+
+
+polimorfismo :
+
+Es un pilar de la OOP. Lo que es importante es lo que se puede hacer con este: Permite a nuestras subclases cambiar o anular los comportamientos de los métodos y atributos del prototipo madre, de la clase madre. Aunque herede las propiedades, el polimorfismo permite cambiar su comportamiento. · Tipos:
+
+1. Polimorfismo de Sobrecarga: ocurre cuando existen métodos con el mismo nombre y funcionalidad similar en clases totalmente independientes entre ellas.
+
+2. Polimorfismo Paramétrico: El polimorfismo paramétrico es la capacidad para definir varias funciones utilizando el mismo nombre, pero usando 3. parámetros diferentes (nombre y/o tipo).
+
+Polimorfismo de Inclusión (JS): La habilidad para redefinir por completo el método de una superclase en una subclase.
+
+
+seee  @[nellow ]  >>>>
+ 
+ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
+ 
+
+Watch the Serie :
+
+https://www.youtube.com/watch?v=pizgd1wM-LI
+ 
+_______________ POO PART II ____________\n
+
+ATRIBUTOS && METHOS STATICS EN JS :
+
+Si declaramos una propiedad o método de una clase como static, podremos acceder a estos sin la necesidad de instanciar dicha clase o prototipo.
+
+Este tipo de atributos/métodos no son exclusivos de JavaScript, sino de casi todos los lenguajes que soportan la programación orientada a objetos.
+
+Methodo Static de La Super>Clase Object :
+
+El superprototipo Object posee algunos métodos de tipo static y como todos los objetos que creamos en JavaScript heredan funcionalidad de Object, podemos acceder a una lista de funciones static que vendrán por defecto en nuestros objetos creados.
+
+Obtener las llaves de un objeto
+
+El método keys del superprototipo Object nos permite obtener el nombre de las llaves de un objeto en una lista:  [ key : value ] ; 
+
+Con el método entries de Object conseguimos tener en listas separadas los llave-valor declarados en un objeto. Estas listas serán almacenadas en otra lista:
+
+Existe un método static propio de Object que es muy interesante: el método getOwnPropertyDescriptors. >> Conocer el límite de acceso de un objeto  .
+
+Las propiedades writable configurable enumerable Pueden limitar quien tiene acceso, modificar nuestros objetos.
+ 
+ Object.defineProperty .
+ 
+ Con esta propiedad se pueden definir nuevas propiedades a nuestro objeto. Así mismo, se puede configurar ciertas características de la propiedad tales como:
+
+Configurable: Esta indica si la propiedad puede ser borrada o eliminada .
+
+Enumerable: Indica si la propiedad puede ser mostrada en la enumeración de las mismas. Existen ciertos métodos que toman como referencia este valor para mostrar la propiedad .
+
+Writable: Esta indica si la propiedad puede ser modificada con el operador de asignación < = > \n.
+
+Si queremos modificar un propiedad que tienen writable: false no permitirá que su valor sea modificado.
+
+Object.keys solo muestra las propiedades que tienen enumerable: true. A diferencia de Object.getOwnPropertyNames que muestra todas las propiedades .
+
+Si queremos eliminar propiedad que tienen configurable: false no permitirá que sea borrada del objetto.
+
+Object.freeze()
+
+Este método congela un objeto que sea pasado. Es decir:
+
+Impide que se le agreguen nuevas propiedades
+Impide que sean eliminas propiedades ya existentes
+Impide que sus las propiedades internas (writable, enumerable y configurable) sean modificadas.
+
+Object.seal()
+
+Este método sella un objeto que sea pasada. Es decir:
+
+Impide que nuevas propiedades sean agregadas
+Cambia en todas las propiedades configurable: false, con lo que impide que sean borradas
+Las propiedades aún puede ser modificadas, ya que writable esta true .
+
+Por tanto :: Accesibilidad a los atributos de un objeto
+Con configurable, enumerable y writable podemos limitar el acceso y modificación de los atributos de un objeto. Veamos su funcionamiento mediante un par de ejemplos:
+
+La memoria en JavaScript :
+
+Las variables son referencias a un espacio en memoria.
+Los navegadores web usan dos tipos de memorias: Stack y Heap.
+La memoria Stack es muy rápida, pero sin tanto espacio. Aquí se guardan los valores primitivos (booleanos, strings, números…).
+La memoria Heap es más lenta, pero permite guardar enormes cantidades de información  ,E n esta memoria guardamos los valores de los objetos .
+
+En memoria, el nombre de las variables apuntan a sus respectivos valores, sin embargo, cuando el valor a almacenar es un objeto, apuntan a otro apuntador (pointer o puntero) y este es el que en realidad apuntará al objeto en sí el cual se encontrará almacenado en la memoria heap.
+
+
+Shallow copy en JavaScript :
+
+
+El Shallow Copy (copia superficial) se refiere a la forma de crear un nuevo objeto a partir de las propiedades de otro. Esta copia solo se hace a un nivel alto, no se hace con objetos dentro de objetos (nested objects), lo que provoca que la modificación de una de sus propiedades, modifique el objeto principal.
+
+Shallow copy con Object.assign
+El Object.assign nos permite realizar el mismo shallow copy que podemos hacer con el bucle for. 
+
+Aun así, tendremos los mismos problemas si el objeto original posee nested objects.
+
+Object.create
+Nos permite crear un objeto que tenga como parte de su prototipo los atributos de otro objeto.
+
+Shallow Copy se refiere a la forma de crear un nuevo objeto a partir de las propiedades de otro. Esta copia solo se hace a un nivel alto, no se hace con objetos dentro de objetos (nested objects), lo que provoca que la modificación de una de sus propiedades, modifique el objeto principal.
+
+
+El Shallow Copy (copia superficial) es una copia bit a bit de un objeto. Se crea un nuevo objeto que tiene una copia exacta de los valores del objeto original. Si alguno de los campos del objeto son referencias a otros objetos, solo se copian las direcciones de referencia, es decir, solo se copia la dirección de memoria.
+
+El método Object.assign () copia todas las propiedades propias enumerables de uno o más objetos de origen a un objeto de destino. Devuelve el objeto de destino modificado.
+
+Las propiedades del objeto de destino se sobrescriben con las propiedades de los orígenes si tienen la misma clave. Las propiedades de las fuentes posteriores sobrescriben a las anteriores.
+
+Object.create()
+El método Object.create () crea un nuevo objeto, utilizando un objeto existente como prototipo del objeto recién creado.
+
+JSON.parse y JSON.stringify :
+
+Con JSON.stringify podemos convertir un objeto en un string y lo inverso con JSON.parse. Por tanto y Podríamos usar ambos métodos para lograr copiar un objeto en otro.
+
+De esta forma, aunque el objeto original tenga objetos anidados, es posible crear un nuevo objeto con las mismas propiedades del original sin que este se vea afectado ante modificaciones en los objetos copias.
+
+ Sin embargo, tanto JSON.parse como JSON.stringify No Pueden trabajar con métodos, lo cual sería un nuevo inconveniente .
+ 
+ 
+Para ello necesitamos utilizar Deep Copy para poder obtener una correcta copia de objetos .
+
+El método JSON.stringify() convierte un objeto o valor de JavaScript en una cadena JSON, reemplazando opcionalmente valores si se especifica una función de reemplazo u opcionalmente incluyendo solo las propiedades especificadas si se especifica una matriz de reemplazo.
+
+JSON.stringify () convierte un valor en notación JSON que lo representa.
+
+El método JSON.parse() analiza una cadena de texto (string) como JSON, transformando opcionalmente el valor producido por el análisis. 
+
+JSON.parse(JSON.stringify())  Es Aun Una Mala Practica paraClonar Objects en JS : 
+
+
+Recursividad : 
+
+La recursividad es cuando una función se llama a sí misma y esta genera una nueva ejecución de la función. Esto sucede reiteradamente hasta que cumpla o no con cierta validación que nosotros declaremos para que deje de llamarse a sí misma en algún punto.
+
+Deep copy con recursividad :
+
+Con el Deep Copy podemos generar copias de objetos sin importar que estos posean objetos anidados o métodos dentro.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+
+
+

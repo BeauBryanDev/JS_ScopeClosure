@@ -1,0 +1,119 @@
+ARRAYS IN JS .
+
+Methodo FoEach :
+
+El método forEach de los arrays consiste en ejecutar una función (callback) para cada uno de los elementos iterados. Iterar significa repetir una acción varias veces.
+
+Este método recibe dos argumentos:
+
+La función que itera cada elemento del array (obligatorio).
+Un objeto al que puede hacer referencia el contexto this en la función. Si se lo omite, será undefined. Recuerde que this en arrow functions es el objeto global.
+
+array.forEach(function(), thisArg) ;
+
+La función, que recibe como argumento el método forEach, utiliza tres parámetros opcionales:
+
+1. El valor actual del elemento iterado. Es decir, si es la primera 	iteración, será el primer elemento, y así sucesivamente.
+
+2. El índice del elemento iterado. Es decir, si es la primera iteración, será  el índice 0, y así sucesivamente.
+
+3. El array que está iterando.
+
+array.forEach(function(element, index, array)) ;
+
+
+Mutabilidad : 
+
+Los conceptos de mutabilidad e inmutabilidad son muy importantes para los siguientes métodos de arrays. Existen métodos mutables que cambian el array original; e inmutables que devuelven un array diferente al original.
+
+Referencias en memoria : 
+
+En JavaScript, cada estructura está guardada en una referencia en memoria, por lo que si cambiamos un elemento en el array, también lo haremos en esa referencia. Al clonar arrays, se crea un nuevo array que tiene las mismas referencias en memoria que el original, por lo que si se realiza un cambio en el original, también cambiará en la copia. 
+
+
+Mutabilidad != NoMutabilidad .
+
+Con lo mencionado anteriormente, mutable es aquella acción que cambia el valor en la referencia en memoria del elemento del array original, provocando que cambien el original y la copia. Inmutable es la acción en la que se cambia el valor, pero en una referencia diferente del original, provocando que el original siga igual.
+
+La mutabilidad es más flexible y una buena opción si se requiere cambiar, actualizar o eliminar datos; pero esto puede ocasionar fallos o resultados erróneos en nuestra aplicación. La inmutabilidad es más exigente, te permite generar nuevas estructuras para manejarlas sin cambiar la original; pero esto puede provocar que la memoria colapse.
+
+En JS los datos asignados a una variable pueden ser de dos tipos:
+
+Primitive type (undefined, null, boolean, number, string, symbol), Reference type (objects, arrays , functions).
+
+Una de las diferencia entre estas dos, está en la forma como se almacenan estos datos en memoria,
+
+Los valores primitivos en js son algo agregado donde solo se pueden reasignar y por lo tanto, todos estos valores son inmutables. 
+
+MaP. 
+
+El método map consiste en crear un nuevo array a partir de los elementos originales transformados mediante una función (callback) y es inmutable.
+
+La transformación implica cambiar cualquier elemento en otro, ya sea un número, un objeto, otro array. Las posibilidades son infinitas.
+
+Este método recibe dos argumentos:
+
+La función que itera y transforma cada elemento del array (obligatorio).
+Un objeto al que puede hacer referencia el contexto this en la función. Si se lo omite, será undefined. Recuerde que this en arrow functions es el objeto global. [ SINTAXIS: ] 
+
+let otherArray = array.map(function(), thisArg) ; 
+
+La función, que recibe como argumento el método map, utiliza tres parámetros:
+
+1. El valor actual del elemento iterado. Es decir, si es la primera iteración, será el primer elemento, y así sucesivamente. 
+
+2.  El índice del elemento iterado. Es decir, si es la primera iteración, será el índice 0, y así sucesivamente. 
+
+3. El array que está iterando. 
+
+const other = array.map(function(element, index, array)) ; 
+
+Diferencia entre la estructura for y el método map :
+
+Los métodos de arrays nos permiten realizar algoritmos con una menor cantidad de líneas que una estructura for, con un resultado igual o parecido. 
+
+Por ejemplo, hagamos un algoritmo que transforme cada elemento de un array en el doble de sí mismo. 
+
+Si utilizamos la estructura For, necesitaremos un array adicional vacío y utilizarlo con el método push para agregar los elementos transformados. El método push es mutable. 
+
+Recuerda siempre retornar un valor en la función callback del método.
+
+Diferencia entre forEach y map
+La principal diferencia entre estos dos es que forEach solamente itera cada elemento, mientras que map itera y transforma cada elemento en un nuevo array. 
+
+Array.map siempre necesita que se devuelva algo en la función. En una arrow function si no se usan paréntesis se conoce como un return implícito, en otras palabras, devuelve automáticamente el resultado de la operación Esto solo funciona con cosas sencillas. Si necesitas usar más de una línea de código para devolver el resultado es mejor que uses { código } y return () para que no tengas problemas.
+
+ Si necesitas transformar objetos dentro de un array, debes tener en cuenta que cada objeto tiene una referencia en memoria propia. Por lo que si transformas un objeto, también lo harás en el original como en el nuevo, aun cuando el método map es inmutable.
+ 
+Los parámetros por referencia los debes tener presente cuando manejes objetos y arrays.
+
+
+Usos comunes o clásicos de map() sobre los arrays:
+
+1. Limpiar datos, seleccionar datos dentro de un array y devolverlos para su utilización en futuras acciones. 
+
+2. Añadir un nuevo elemento, modificar agregando un nuevo dato al objeto pero sin modificar el array original. 
+
+Añadir un nuevo elemento, modificar agregando un nuevo dato al objeto pero sin modificar el array original.
+
+Esto provoca que como estamos modificando la referencia en memoria, el array original también sea modificado. Entonces en conclusión, por más que map() sea inmutable en este punto estamos copiando la referencia en memoria y por eso hace el cambio en el original.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
