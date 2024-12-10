@@ -317,6 +317,42 @@ Deep copy con recursividad :
 
 Con el Deep Copy podemos generar copias de objetos sin importar que estos posean objetos anidados o métodos dentro.
 
+Abstracción con objetos literales y deep copy
+Object.isSealed()
+El método **Object.isSealed()** si el objeto está sellado.
+
+Devuelve true si el objeto está sellado, de lo contrario devuelve false. Un objeto está sellado si no es extensible y si todas sus propiedades no se pueden configurar y por lo tanto no removibles.
+
+Impide que nuevas propiedades sean agregadas
+Cambia en todas las propiedades configurable: false, con lo que impide que sean borradas
+Las propiedades aún puede ser modificadas, ya que writable esta true.
+
+Object.isFrozen()
+El método **Object.isFrozen()** determina si un objeto está congelado.
+
+Un objeto está congelado si y solo si no es extendible, todas sus propiedades son no-configurables, y todos los datos de sus propiedades no tienen capacidad de escritura.
+
+Este método congela un objeto que sea pasado. Es decir:
+
+Impide que se le agreguen nuevas propiedades
+Impide que sean eliminas propiedades ya existentes
+Impide que sus las propiedades internas (writable, enumerable y configurable) sean modificadas
+
+propiedades privadas en JavaScript .
+
+Module pattern y namespaces:  
+
+Factory Function () :
+
+En JavaScript no tenemos keywords para indicar que un atributo es privado o público a diferencia de otros lenguajes de programación. Sin embargo, podemos aplicar ciertas técnicas y métodos para lograrlo .
+
+Object.defineProperties( ) ;
+
+Getters y setters : 
+
+<<Object.getOwnPropertiesDescriptor( myObject ) >>
+
+
 
 
 

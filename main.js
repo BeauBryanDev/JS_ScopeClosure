@@ -17,6 +17,16 @@ const MyFigure = {
 
 };
 
+const sa = MyFigure->FigName ;
+
+const scd =MyFigure["FigArea"];
+
+const std = MyFigure[FIgOwner];
+
+console.log(sa);
+console.log(scd);
+console.log(std);
+
 
 MyFigure.FigArea.push(32);
 
